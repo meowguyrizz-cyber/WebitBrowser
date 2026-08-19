@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebitBrowser | Search the web</title>
+    <meta
+      name="description"
+      content="WebitBrowser is a lightweight web browser-style search app for fast browsing, search, and discovery on the web."
+    />
+    <meta name="theme-color" content="#08111f" />
+    <link rel="canonical" href="/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="WebitBrowser" />
+    <meta
+      property="og:description"
+      content="Search the web and browse pages through the WebitBrowser web app."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="toolbar">
+        <div class="nav-group">
+          <button id="backBtn" aria-label="Go back">←</button>
+          <button id="forwardBtn" aria-label="Go forward">→</button>
+          <button id="reloadBtn" aria-label="Reload">↻</button>
+        </div>
+
+        <div class="address-wrap">
+          <input
+            id="addressInput"
+            type="text"
+            value="https://www.google.com"
+            placeholder="Search or enter a URL"
+            aria-label="Search or enter URL"
+          />
+          <button id="goBtn" class="primary">Search</button>
+        </div>
+
+        <label class="engine-control">
+          <span>Search engine</span>
+          <select id="engineSelect" aria-label="Search engine">
+            <option value="google">Google</option>
+            <option value="duckduckgo">DuckDuckGo</option>
+            <option value="bing">Bing</option>
+          </select>
+        </label>
+
+        <div class="status-pill" id="statusPill">WebDefender: Protected</div>
+      </header>
+
+      <main class="browser-frame" id="browserFrame">
+        <section class="welcome-panel" aria-labelledby="welcomeTitle">
+          <p class="eyebrow">WEBITBROWSER / LIVE SEARCH</p>
+          <h1 id="welcomeTitle">Search the open web.</h1>
+          <p class="intro">Use WebitBrowser to search Google, DuckDuckGo, or Bing and open any result in a full browser tab.</p>
+          <form id="welcomeForm" class="welcome-search">
+            <input id="welcomeInput" type="search" placeholder="What are you looking for?" aria-label="Search the web" />
+            <button class="primary" type="submit">Search the web</button>
+          </form>
+          <div class="quick-links" aria-label="Popular destinations">
+            <a href="https://www.google.com" target="_blank" rel="noopener">Google</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.wikipedia.org" target="_blank" rel="noopener">Wikipedia</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <p class="notice">WebitBrowser opens live websites directly. Some sites prevent other web apps from embedding them, so results open in a normal browser tab.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
